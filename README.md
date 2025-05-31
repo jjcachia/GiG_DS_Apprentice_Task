@@ -38,11 +38,11 @@ The project includes a Python virtual environment in '.venv' which is used to ru
 #### Environment Setup (manual)
 Create a virtual environment and install dependencies by running the below in terminal
 
-'''
+```
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-'''
+```
 
 #### Preprocessing the Data
 The processed data is included in the project, however, running notebooks/data-preparation.ipynb will process and save all necessary data using gig_docs.csv
