@@ -29,12 +29,17 @@ GiG_DS_Apprentice_Task/
 
 ### Running the Project
 
-#### Environment Setup (using '.venv')
-The project includes a Python virtual environment in '.venv' which is used to run the project.
+#### Requirments
+- Python 3.12
+
+~~#### Environment Setup (using '.venv')
+The project includes a Python virtual environment in '.venv' which is used to run the project.~~
 
 #### Environment Setup (manual)
-Install dependencies by running the below in terminal
+Create a virtual environment and install dependencies by running the below in terminal
 
+> python -m venv .venv
+> source .venv/bin/activate
 > pip install -r requirements.txt
 
 #### Preprocessing the Data
