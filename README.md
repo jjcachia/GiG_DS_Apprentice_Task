@@ -50,7 +50,9 @@ The processed data is included in the project, however, running notebooks/data-p
 #### Launching the Web Interfact
 Once environment and data is set, the chatbot web interface can be launched by running the below in terminal.
 
-> streamlit run app.py
+```
+streamlit run app.py
+```
 
 ### Approach and Design Decisions
 
