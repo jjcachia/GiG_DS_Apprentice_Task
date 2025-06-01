@@ -44,6 +44,15 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+The next step is to then make sure the following NLTK corpora are downloaded by running the following in Python:
+
+```
+import nltk
+nltk.download('stopwords')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
+```
+
 ### Preprocessing the Data
 The processed data is included in the project, however, running notebooks/data-preparation.ipynb will process and save all necessary data using gig_docs.csv
 
@@ -83,13 +92,6 @@ The initial approach used a simple term frequency (TF) match: the number of shar
 To improve performance, a CountVectorizer + Cosine Similarity-based method was introduced. It worked similarly but stored all document vectors in a matrix, allowing fast cosine similarity comparisons. Despite this, it still lacked depth as word meaning and context weren’t considered.
 
 This led to utilising TF-IDF + Cosine Similarity, which provided better results without significant changes to the code. TF-IDF downweighted common terms and improved the chatbot’s ability to identify more meaningful matches in a computationally efficient way.
-
-### A Simple Web Interface
-Not having much experience developing websites, I was pleased at how developer friendly streamlit was for developing this style of app. 
-
-Though, before developing a the web interface I decided to neatly organize my code into classes. This makes the project, not only nicer to read, but also scalable in the future. Inspiration for the class sctructure was taken from this following blog post https://medium.com/@zarina.kozhurkina/chat-bot-using-python-classes-part-3-02fed72a975b. The chatbot class was first implemented which included the functions analysed in the jupyter notebook, however, a user and chat class were then introduced such that user log and chat history could be maintained, allowing for a user to open multiple chats at once, each having a history of the entire conversation which could be then further used to generate better responses in the future. The website was then design, taking inspiration from a few youtube videos (https://www.youtube.com/watch?v=jYY24eNTYNg, https://www.youtube.com/watch?v=j2WTq82rUr0)
-
-When developing the web interface it was made sure that in the limited scope of the task, it could still be scalable where I to continue working on this. 
 
 ### A Simple Web Interface
 
